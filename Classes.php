@@ -38,8 +38,11 @@ class car_model {
     }
 }
 class car_warranty extends car_model {
-    public function set_name($new_name){
-
+    public function set_model($model){
+        if($model == 'Nissan' || 'Buick'){
+            $this->model = $model;
+        } else if ($model == 'Toyota' || 'Nissan')
+            car:: set_name($model);
     }
 }
 ?>
