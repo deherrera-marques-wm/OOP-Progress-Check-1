@@ -9,11 +9,11 @@
 </head>
 <body>
 <?php
-$obj = new car('Nissan' , 'Toyota' , 'Buick' , 'Hyundai' , 'Mitsubishi');
+$obj = new car_model('Nissan' , 'Toyota' , 'Buick' , 'Hyundai' , 'Mitsubishi');
 
 echo 'Model: ' . $obj->get_model() , '</br>';
 
-$fast = new car('Ferrari' , 'SUV' , 'Mustang');
+$fast = new car_model('Ferrari' , 'SUV' , 'Mustang', '', '');
 
 echo 'Cars: ' . $fast->get_model() , '</br>';
 ?>
