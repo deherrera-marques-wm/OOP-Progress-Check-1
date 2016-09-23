@@ -47,4 +47,27 @@ class car_warranty extends car_model {
             car_model:: set_model($model);
     }
 }
+abstract class CarDesign {
+
+    public $name;
+    public $color;
+
+    public function describe() {
+        return $this->name;
+    }
+
+    public function makeColor();
+}
+
+class shiningColor extends CarDesign {
+
+    public function describe(){
+        return parent::describe();
+    }
+
+    public function makeColor() {
+        return 'Gold';
+    }
+}
+
 ?>

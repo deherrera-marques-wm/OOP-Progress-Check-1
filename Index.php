@@ -18,6 +18,12 @@ $fast = new car_model('Ferrari' , 'SUV' , 'Mustang');
 
 echo 'Model: ' . $fast->get_model() , '</br>';
 echo 'Engine: ' . $fast->get_engine() , '</br>';
+
+
+var $color = new shiningColor();
+$color->color='yellow';
+$color->name='Mustang';
+echo $color->describe();
 ?>
 </body>
 </html>
