@@ -9,13 +9,15 @@
 </head>
 <body>
 <?php
-$obj = new car_model('Nissan' , 'Toyota' , 'Buick' , 'Hyundai' , 'Mitsubishi');
+$obj = new car_model('Nissan' , 'Toyota' , 'Buick');
 
 echo 'Model: ' . $obj->get_model() , '</br>';
+echo 'Engine: ' . $obj->get_engine(), '</br>';
 
-$fast = new car_model('Ferrari' , 'SUV' , 'Mustang', '', '');
+$fast = new car_model('Ferrari' , 'SUV' , 'Mustang');
 
-echo 'Cars: ' . $fast->get_model() , '</br>';
+echo 'Model: ' . $fast->get_model() , '</br>';
+echo 'Engine: ' . $fast->get_engine() , '</br>';
 ?>
 </body>
 </html>

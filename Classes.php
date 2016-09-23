@@ -2,15 +2,24 @@
 class car_model {
     public $model;
     public $engine;
-    public $cpu;
-    public $model_cpu;
     public $recipt;
 
-    function __construct ($model, $engine, $cpu, $model_cpu , $recipt) {
+    public $model_name;
+    public static $minModelLength = 10;
+
+    public static function validateModel_name($model_name){
+        if (strlen($model_name) >= self::$minModelLength) {
+            return true;
+
+        }else{
+            return false;
+        }
+    }
+
+
+    function __construct ($model, $engine, $recipt) {
         $this -> model = $model;
         $this -> engine = $engine;
-        $this -> cpu = $cpu;
-        $this -> model_cpu = $model_cpu;
         $this -> recipt = $recipt;
     }
 
@@ -18,31 +27,24 @@ class car_model {
         $this->model = $model;
     }
 
-    function get_model () {
+    function get_model() {
         return $this -> model;
     }
 
-    function get_model_cpu () {
-        return $this -> model_cpu;
+    function get_engine() {
+        return $this ->engine;
     }
 
-    function get_cpu () {
-        return $this -> cpu;
-    }
-
-    function get_engine () {
-        return $this -> engine;
-    }
-    private function get_recipt(){
+     function get_recipt() {
         return $this->recipt;
     }
 }
 class car_warranty extends car_model {
-    public function set_model($model){
-        if($model == 'Nissan' || 'Buick'){
+    public  function set_model($model){
+        if($model == 'Nissan' || 'Ferrari'){
             $this->model = $model;
-        } else if ($model == 'Toyota' || 'Nissan')
-            car:: set_name($model);
+        } else if ($model == 'Nissan' || 'Ferrari')
+            car_model:: set_model($model);
     }
 }
 ?>
